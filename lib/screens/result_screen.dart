@@ -20,9 +20,9 @@ class ResultScreen extends StatelessWidget {
 
   String getGuidanceText() {
     if (litres < 2.0) {
-      return 'تقدير منخفض نسبياً ضمن هذه المعادلة التعليمية. يمكنك توزيع شرب الماء على مدار اليوم.\n\n(Spread your drinking over the day. Needs vary.)';
+      return 'تقدير منخفض نسبياً ضمن هذه المعادلة التعليمية. يمكنك توزيع شرب الماء على مدار اليوم.';
     } else if (litres <= 3.0) {
-      return 'تقدير متوسط ضمن هذه المعادلة التعليمية. حاول توزيع الشرب على فترات خلال اليوم.\n\n(Spread your drinking over the day. Needs vary.)';
+      return 'تقدير متوسط ضمن هذه المعادلة التعليمية. حاول توزيع الشرب على فترات خلال اليوم.';
     } else {
       return 'تقدير مرتفع نسبياً بسبب الوزن أو ساعات النشاط. الاحتياج الفعلي يختلف من شخص لآخر، ويمكنك استشارة مختص عند الحاجة.';
     }

@@ -15,7 +15,7 @@ class InputScreen extends StatefulWidget {
 
 class _InputScreenState extends State<InputScreen> {
   String? selectedGender;
-  double activityHours = 2.0;
+  double activityHours = 1.0;
   int weight = 60;
   int age = 20;
 
