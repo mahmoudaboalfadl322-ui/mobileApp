@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../utils/constants.dart';
-import '../utils/water_calculator.dart';
-import '../widgets/bottom_button.dart';
-import '../widgets/counter_card.dart';
-import '../widgets/gender_card.dart';
+import 'bottom_button.dart';
+import 'counter_card.dart';
+import 'gender_card.dart';
+import 'main.dart';
 import 'result_screen.dart';
+import 'water_calculator.dart';
 
 class InputScreen extends StatefulWidget {
   const InputScreen({super.key});

@@ -48,9 +48,12 @@ litres = totalMl / 1000;
 
 ```text
 lib/
-├── main.dart             # نقطة الانطلاق وإعداد الثيم العام
+├── main.dart             # نقطة الانطلاق وثيم وألوان التطبيق
 ├── input_screen.dart     # الشاشة الأولى لإدخال البيانات
 ├── result_screen.dart    # شاشة عرض النتيجة والإرشادات
+├── gender_card.dart      # بطاقة اختيار الجنس
+├── counter_card.dart     # بطاقة أزرار الوزن والعمر
+├── bottom_button.dart    # الزر السفلي العريض
 └── water_calculator.dart # دالة الحساب المستقلة
 ```
 
