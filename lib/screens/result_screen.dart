@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'bottom_button.dart';
-import 'main.dart';
+import '../main.dart';
+import '../widgets/bottom_button.dart';
 
 class ResultScreen extends StatelessWidget {
   final double litres;

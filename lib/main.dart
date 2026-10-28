@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'input_screen.dart';
+import 'screens/input_screen.dart';
 
 const Color kBgColor = Color(0xFF0A0E21);
 const Color kActiveCardColor = Color(0xFF1D1E33);
