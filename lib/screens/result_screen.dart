@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../utils/constants.dart';
+import '../widgets/bottom_button.dart';
 
 class ResultScreen extends StatelessWidget {
   final double litres;
@@ -29,15 +31,15 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0E21),
+      backgroundColor: kBgColor,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF0A0E21),
+        backgroundColor: kBgColor,
         title: const Text(
           'Your Daily Water Intake',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        iconTheme: const IconThemeData(color: Color(0xFF00E5FF)),
+        iconTheme: const IconThemeData(color: kAccentColor),
       ),
       body: SafeArea(
         child: Column(
@@ -51,7 +53,7 @@ class ResultScreen extends StatelessWidget {
                       width: double.infinity,
                       padding: const EdgeInsets.all(24.0),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1D1E33),
+                        color: kActiveCardColor,
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Column(
@@ -59,7 +61,7 @@ class ResultScreen extends StatelessWidget {
                           const Icon(
                             Icons.water_drop,
                             size: 48,
-                            color: Color(0xFF00E5FF),
+                            color: kAccentColor,
                           ),
                           const SizedBox(height: 12),
                           Text(
@@ -74,7 +76,7 @@ class ResultScreen extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF111328),
+                              color: kInactiveCardColor,
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: const Column(
@@ -84,7 +86,7 @@ class ResultScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
-                                    color: Color(0xFFB0BEC5),
+                                    color: kTextColor,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -93,7 +95,7 @@ class ResultScreen extends StatelessWidget {
                                   'Educational estimate only — not medical advice',
                                   style: TextStyle(
                                     fontSize: 12,
-                                    color: Color(0xFFB0BEC5),
+                                    color: kTextColor,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -118,7 +120,7 @@ class ResultScreen extends StatelessWidget {
                       width: double.infinity,
                       padding: const EdgeInsets.all(16.0),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF111328),
+                        color: kInactiveCardColor,
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Column(
@@ -129,7 +131,7 @@ class ResultScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xFFB0BEC5),
+                              color: kTextColor,
                             ),
                           ),
                           const Divider(color: Colors.white24, height: 20),
@@ -144,29 +146,11 @@ class ResultScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              width: double.infinity,
-              height: 55,
-              margin: const EdgeInsets.all(16.0),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF00E5FF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text(
-                  'Re-calculate',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF0A0E21),
-                  ),
-                ),
-              ),
+            BottomButton(
+              title: 'Re-calculate',
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
           ],
         ),
@@ -180,7 +164,7 @@ class ResultScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label, style: const TextStyle(color: Color(0xFFB0BEC5), fontSize: 14)),
+          Text(label, style: const TextStyle(color: kTextColor, fontSize: 14)),
           Text(value, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 15)),
         ],
       ),

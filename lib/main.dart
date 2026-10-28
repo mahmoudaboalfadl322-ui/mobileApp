@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'input_screen.dart';
+import 'screens/input_screen.dart';
+import 'utils/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Water Tracker',
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF0A0E21),
+        scaffoldBackgroundColor: kBgColor,
       ),
       home: const InputScreen(),
     );

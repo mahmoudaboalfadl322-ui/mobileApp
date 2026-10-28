@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:water_hydration/water_calculator.dart';
+import 'package:water_hydration/utils/water_calculator.dart';
 
 void main() {
   group('WaterCalculator Calculation Tests', () {
